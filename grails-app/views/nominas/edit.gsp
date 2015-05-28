@@ -2,17 +2,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main">
+		<meta name="layout" content="mainb">
 		<g:set var="entityName" value="${message(code: 'nominas.label', default: 'Nominas')}" />
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#edit-nominas" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+			<ul class="nav nav-pills">
+				<li><a class="home" href="${createLink(uri: '/')}"><span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span> <g:message code="default.home.label"/></a></li>
+				<li><g:link class="list" action="index"><span class="glyphicon glyphicon-sort-by-alphabet" aria-hidden="true"> </span><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="create" action="create"><span class="glyphicon glyphicon-plus" aria-hidden="true"> </span><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
 		<div id="edit-nominas" class="content scaffold-edit" role="main">
