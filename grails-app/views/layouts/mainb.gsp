@@ -30,12 +30,12 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> Admin <span class="caret"></span></a>
+                    <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> ${session["nombre"]} <span class="caret"></span></a>
                     <ul id="g-account-menu" class="dropdown-menu" role="menu">
-                        <li><a href="#">Perfil</a></li>
+                        <li><a href="">Perfil</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><i class="glyphicon glyphicon-lock"></i> Salir</a></li>
+                <li><a href="/Nomina/Login/cerrarSesion"><i class="glyphicon glyphicon-lock"></i> Salir</a></li>
             </ul>
         </div>
     </div>
@@ -48,43 +48,29 @@
     <div class="row">
         <div class="col-sm-3">
             <!-- Left column -->
-            <a href="#"><strong><i class="glyphicon glyphicon-wrench"></i> Herramientas</strong></a>
+            <a href="#"><strong><i class="glyphicon glyphicon-wrench"></i> Principal</strong></a>
 
             <hr>
 
             <ul class="nav nav-stacked">
                 <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#userMenu">Propiedades <i class="glyphicon glyphicon-chevron-down"></i></a>
                     <ul class="nav nav-stacked collapse in" id="userMenu">
-                        <li class="active"> <a href="#"><i class="glyphicon glyphicon-home"></i> Home</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> Messages <span class="badge badge-info">4</span></a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Options</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-comment"></i> Shoutbox</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-user"></i> Staff List</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-flag"></i> Transactions</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-exclamation-sign"></i> Rules</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
+                        <li class="active"> <a href="empleado"><i class="glyphicon glyphicon-triangle-right"></i> Empleados</a></li>
+                        <li class="active"> <a href="nominas"><i class="glyphicon glyphicon-triangle-right"></i> Nominas</a></li>
+                        <li class="active"> <a href="registroNovedad"><i class="glyphicon glyphicon-triangle-right"></i> Registro de novedades</a></li>
+                        
                     </ul>
                 </li>
-                <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#menu2"> Reports <i class="glyphicon glyphicon-chevron-right"></i></a>
+                
+                <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#menu2"> Avanzado <i class="glyphicon glyphicon-chevron-right"></i></a>
 
                     <ul class="nav nav-stacked collapse" id="menu2">
-                        <li><a href="#">Information &amp; Stats</a>
-                        </li>
-                        <li><a href="#">Views</a>
-                        </li>
-                        <li><a href="#">Requests</a>
-                        </li>
-                        <li><a href="#">Timetable</a>
-                        </li>
-                        <li><a href="#">Alerts</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-header">
-                    <a href="#" data-toggle="collapse" data-target="#menu3"> Social Media <i class="glyphicon glyphicon-chevron-right"></i></a>
-                    <ul class="nav nav-stacked collapse" id="menu3">
-                        <li><a href=""><i class="glyphicon glyphicon-circle"></i> Facebook</a></li>
-                        <li><a href=""><i class="glyphicon glyphicon-circle"></i> Twitter</a></li>
+                        <li><a href="Usuario"><i class="glyphicon glyphicon-triangle-right"></i> Usuario</a></li>
+                        <li><a href="RolUsuario"><i class="glyphicon glyphicon-triangle-right"></i> Rol Usuario</a></li>
+                        <li><a href="RolOpcionOperacion"><i class="glyphicon glyphicon-triangle-right"></i> Rol Opcion Operacion</a></li>
+                        <li><a href="Rol"><i class="glyphicon glyphicon-triangle-right"></i> Rol </a></li>
+                        <li><a href="Operacion"><i class="glyphicon glyphicon-triangle-right"></i> Operacion </a></li>
+                        <li><a href="Opcion"><i class="glyphicon glyphicon-triangle-right"></i> Opcion </a></li>
                     </ul>
                 </li>
             </ul>
@@ -119,29 +105,9 @@
 </div>
 <!-- /Main -->
 
-<footer class="text-center">Pie de Pagina</strong></a></footer>
+<footer class="text-center">Marlon Guerra, Leonardo Romero, Hugo Tilano</strong></a></footer>
 
-<div class="modal" id="addWidgetModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title">Add Widget</h4>
-            </div>
-            <div class="modal-body">
-                <p>Add a widget stuff here..</p>
-            </div>
-            <div class="modal-footer">
-                <a href="#" data-dismiss="modal" class="btn">Close</a>
-                <a href="#" class="btn btn-primary">Save changes</a>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dalog -->
-</div>
-<!-- /.modal -->
-	<!-- script references -->
+
                <script src="${resource(dir: 'js', file: 'jquery-2.1.4.js')}"></script>		
 	       <script src="${resource(dir: 'js/AdminTemplate/js', file: 'bootstrap.min.js')}"></script>
                <script src="${resource(dir: 'js/AdminTemplate/js', file: 'scripts.js')}"></script>              

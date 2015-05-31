@@ -18,8 +18,8 @@ class Usuario {
         
         usuario nullable: false, maxSize: 50, blank:false
         nombre nullable: true, maxSize: 150, blank:false
-        contrasena nullable: true, maxSize: 100    
-        idEstadoUsuario  nullable: true,maxSize: 10
+        contrasena nullable: true, maxSize: 100, password:true    
+        idEstadoUsuario  inList:['A','I'] 
     }
     
     String toString(){

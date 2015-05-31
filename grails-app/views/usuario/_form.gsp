@@ -23,7 +23,7 @@
 		<g:message code="usuario.contrasena.label" default="Contrasena" />
 		
 	</label>
-	<g:textField name="contrasena" maxlength="100" value="${usuarioInstance?.contrasena}"/>
+	<g:field type="password" name="contrasena" maxlength="100" value="${usuarioInstance?.contrasena}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'idEstadoUsuario', 'error')} ">
@@ -31,7 +31,7 @@
 		<g:message code="usuario.idEstadoUsuario.label" default="Id Estado Usuario" />
 		
 	</label>
-	<g:textField name="idEstadoUsuario" maxlength="10" value="${usuarioInstance?.idEstadoUsuario}"/>
+	<g:select name="idEstadoUsuario" from="${usuarioInstance.constraints.idEstadoUsuario.inList}" value="${usuarioInstance?.idEstadoUsuario}" valueMessagePrefix="usuario.idEstadoUsuario" noSelection="['': '']"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'eliminado', 'error')} required">
